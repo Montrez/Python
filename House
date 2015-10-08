@@ -1,0 +1,55 @@
+# Prolog
+# Author:Montrez Cox
+# Class: CS 1010
+# Section: A
+# Date: 10/7/15
+# Purpose:Write a program that draws a house.
+#  Program to draw a house
+# Preconditions: (input)
+#       Graphics library 
+# Postconditions:  (output)
+#       House displayed
+
+
+from graphics import *
+
+
+def main():
+    win = GraphWin("House", 800, 800)
+
+    chimney = Rectangle(Point(350,20), Point(300, 300))
+    chimney.setFill('gray')
+    chimney.draw(win)
+    
+    house = Rectangle(Point(80, 80), Point(350, 350)) # the two points specify the top left and bottom right corners
+    house.setFill('red')
+    house.draw(win)
+
+    door = Rectangle(Point(180, 250), Point(280, 350))
+    door.setFill('yellow')
+    door.draw(win)
+ 
+    knob = Circle(Point(260, 310), 10)
+    knob.setFill('gray')
+    knob.draw(win)
+    
+    roof = Polygon(Point(215, 1), Point(10, 100), Point(415, 100))
+    roof.setFill('green')
+    roof.draw(win)   
+    
+    window = Rectangle(Point(80, 110), Point(205, 225))
+    window.setFill('blue')
+    window.draw(win)
+        
+    windows = Rectangle(Point(350, 110), Point(230, 225))
+    windows.setFill('blue')
+    windows.draw(win)
+
+
+    
+    
+
+    # these two lines wait for the user to click before program exits and window closes
+    win.getMouse()
+    win.close()
+main()
