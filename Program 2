@@ -1,0 +1,24 @@
+# Prolog
+# Author: Montrez Cox
+# Section: A
+# Date:   9/23/15
+# Purpose:
+#  Program: Write a Python program to compute the
+#multiplication table without the multiplication operator *. 
+# Preconditions: (input)
+#       User supplies input 
+# Postconditions:  (output)
+#       User greeted with a message
+#       Gives a multiplication list based on the number the user gave. 
+def main():
+    print('Hello!')
+    n = eval(input("Enter n for the multiplication table n x n: "))
+    n = int (abs (n)) 
+    for a in range(1,n+1):
+        accumulator = 0
+        for b in range(1,n+1):
+            accumulator = accumulator + a
+            print(a,'*', b, '=', accumulator)
+main()
+
+
